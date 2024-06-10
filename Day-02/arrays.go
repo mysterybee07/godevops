@@ -8,5 +8,5 @@ import "fmt"
 func main() {
 	fmt.Println("Arrays")
 	var arr [5]int = [5]int{1, 2, 3, 4} //by default the array will be of size 5 as it adds 0 as fifth element
-	fmt.Println(arr)
+	fmt.Println(arr[3])
 }
