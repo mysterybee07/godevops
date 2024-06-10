@@ -19,16 +19,18 @@ func main() {
 	}
 
 	// infinite loop
-	// for {
-	// 	if i == 0 {
-	// 		break
-	// 	}
-	// }
+	for {
+		if i > 10 {
+			break
+		}
+		fmt.Println(i)
+		i++
+	}
 
 	// for loop with range (for slices, arrays, maps, strings)
 	nums := []int{1, 2, 3, 4, 5}
-	for index, value := range nums {
-		fmt.Println(index, value)
+	for value, index := range nums {
+		fmt.Println(value, index)
 	}
 
 	// for loop with range (for strings)
