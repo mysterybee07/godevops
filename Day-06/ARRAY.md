@@ -73,3 +73,9 @@ Common Operations of Arrays:
    for index, value := range numbers{
     fmt.Println(index,value)
    }
+
+
+What are Multidimensional Arrays:
+A multidimensional array is essentially an array of arrays.The most common type is a 2D array, often used to represent matrices or grids.
+
+var matrix [3][3] int -> represents it has three arrays and each array contains three elements.
