@@ -74,3 +74,17 @@ Common Operations in an array
          fmt.Println("Element found")
       }
    }
+
+Iterating through the slices
+1. For Loop: Traditional for loop or for-range loop can be used
+   numbers := []int{1,2,3,4,5,6,7}
+   for i:=0; i<len(numbers); i++{
+      fmt.Println(numbers[i])
+   }
+   Use "len()" function to get the length of arrays
+
+2. Range Loop: More idiomatic in Go
+   numbers :=[]int{1,2,3,4}
+   for index,value :range numbers{
+      fmt.Println(index,value)
+   }
