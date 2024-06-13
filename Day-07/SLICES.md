@@ -29,15 +29,48 @@ Different Ways to Declare Slices in Go:
 
 Common Operations in an array
 1. Length and Capacity:
+   Length is the number of elements in the slice. Capacity is the number of elements the slice can grow to.
+   slice := [] int{1,2,3,4}
+   length := len(slice)
+   capacity := cap(slice)
    
 2. Appending to Slices:
+   var numbers [] int
+   numbers = append(numbers, 1) ->appending single elements
+   numbers = append(numbers, 2,3,4,5)
+
+   moreNumbers := []int{6,7,8,9,10,11}
+   numbers = append(numbers, moreNumbers...)
+    
    
 3. Slicing a Slice
+   subSlice := numbers[1:4] ->here index 1 is inclusive but 4 is exclusive
+
+   <!-- slicing upto specific index -->
+   firstThree:=numbers[:3]
+
+   Slicing from specific index to the end
+   fromThree:=numbers[2:]
    
 4. Delete an element from slice
+   <!-- Removing the element at index 2 -->
+   numbers = append(numbers[:2], numbers[:3]...)
    
 5. Checking if a Slice is Empty
+   if len(numbers) == 0{
+      fmt.Println("Slice is empty")
+   }
    
 6. Sorting a Slice
+   import"sort"
+   <!-- sorting a slice of integers -->
+   sort.Ints(numbers)
+   <!-- Sorting a slice of strings -->
+   sort.Strings(names)
    
 7. Finding an Element in a Slice
+   for _,v :=range numbers{
+      if v==target{
+         fmt.Println("Element found")
+      }
+   }
