@@ -75,4 +75,21 @@ func main() {
 		}
 	}
 	fmt.Println("Array is sorted:", arr)
+
+	// Returning the index of the target element
+	target := 14
+	var index int
+	for i := 0; i < len(arr); i++ {
+		if arr[i] == target {
+			index = i
+		}
+	}
+	fmt.Println("Index of the target element is:", index)
+
+	// Merging two sorted arrays
+	arr1 := []int{1, 2, 3}
+	arr2 := []int{4, 5, 6}
+	arr1 = append(arr1, arr2...)
+	fmt.Println(arr1)
+
 }
