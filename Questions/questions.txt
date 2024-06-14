@@ -1,0 +1,48 @@
+Here are the list of question to solve
+
+Find the Largest Element:
+Given an array of integers, find and return the largest element.
+
+Sum of Array Elements:
+Calculate and return the sum of all elements in an array of integers.
+
+Reverse an Array:
+Reverse the elements of an array in place.
+
+Remove Duplicates:
+Remove duplicate elements from an array and return the resulting array with unique elements.
+
+Check if Array is Sorted:
+Determine if an array of integers is sorted in ascending order.
+
+Find the Second Largest Element:
+Find and return the second largest element in an array of integers.
+
+Count Occurrences of an Element:
+Given an array and a target element, count how many times the target element appears in the array.
+
+Find the Index of an Element:
+Given an array and a target element, return the index of the first occurrence of the target element. If the element is not found, return -1.
+
+Rotate an Array:
+Rotate the elements of an array to the right by a given number of steps.
+
+Merge Two Sorted Arrays:
+Given two sorted arrays, merge them into a single sorted array.
+
+Here are some additional questions for more practice:
+
+Find the Minimum Element:
+Given an array of integers, find and return the smallest element.
+
+Find the Missing Number:
+Given an array containing n-1 integers ranging from 1 to n, find the missing integer.
+
+Find Pairs with Given Sum:
+Given an array of integers and a target sum, find all pairs of elements that add up to the target sum.
+
+Find the Intersection of Two Arrays:
+Given two arrays, find the intersection (common elements) and return them as a new array.
+
+Sort an Array:
+Implement a sorting algorithm (e.g., bubble sort, selection sort, or quicksort) to sort an array of integers.
