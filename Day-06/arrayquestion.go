@@ -102,7 +102,4 @@ func main() {
 	}
 	fmt.Println("The target element", target, "has been repeated", count, "times")
 
-	// Rotate an array
-	k := 2
-
 }
