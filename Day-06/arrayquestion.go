@@ -77,7 +77,7 @@ func main() {
 	fmt.Println("Array is sorted:", arr)
 
 	// Returning the index of the target element
-	target := 14
+	target := 12
 	var index int
 	for i := 0; i < len(arr); i++ {
 		if arr[i] == target {
@@ -91,5 +91,18 @@ func main() {
 	arr2 := []int{4, 5, 6}
 	arr1 = append(arr1, arr2...)
 	fmt.Println(arr1)
+
+	// how many times the target element has been repeated
+	count := 0
+	// target number is defined above
+	for i := 0; i < len(arr1); i++ {
+		if arr[i] == target {
+			count++
+		}
+	}
+	fmt.Println("The target element", target, "has been repeated", count, "times")
+
+	// Rotate an array
+	k := 2
 
 }
