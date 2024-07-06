@@ -37,3 +37,23 @@ Different Ways to Declare Maps in Go
 6. Nested Maps
    company := make(map[string] map[int] string) -> first one is a map with key string and value of type map
    This creates a map with string keys, where each key maps to another map with integer keys and string values.
+
+#  Common Operations Using map
+
+1. Check Length
+   m:= map[keytype] valueType{key1: value1, key2: value2}
+   len(m)
+
+2. Adding Elements
+   mapVariable[key]=value
+
+3. Retrieving Elements
+   value := mapVariable[key]
+   If you access a key that doesnot exist, you get the zero value of the value type
+
+4. Checking existence
+   value, ok:= mapVariable[key]
+   ok is true if the key exists false otherwise.
+
+5. Deleting Elements
+   delete(mapVariable, key)
