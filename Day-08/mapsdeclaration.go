@@ -1,51 +1,62 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println("Declaration of map")
-	// Using var keyword without initializing it
-	var m map[string]int
-	fmt.Println(m)
+	// Declarations using var keyword
+	var map1 map[string]int
+	fmt.Println("Map is declared using var keyword", map1)
 
 	// Using map literals
-	m2 := map[string]int{
-		"biraj":   19,
-		"aadarsh": 20,
-		"kiran":   21,
+	map2 := map[string]int{
+		"one":   1,
+		"two":   2,
+		"three": 3,
 	}
-	fmt.Println(m2)
+	fmt.Println("Map is declared using map literals", map2)
 
-	// Using the make function
-	m3 := make(map[string]int)
-	m3["biraj"] = 19
-	m3["aadarsh"] = 20
-	fmt.Println("The maps declared using make function is", m3)
+	// Creating a map with make function
+	map3 := make(map[string]int)
+	map3["one"] = 1
+	map3["two"] = 2
+	fmt.Println("Map is created using make function", map3)
 
 	// Using make function with specific size
-	m4 := make(map[string]int, 10) //maps with the initial capacity of 10
-	m4["biraj"] = 19
-	m4["aadarsh"] = 20
-	m4["kiran"] = 21
-	m4["ram"] = 22
+	map4 := make(map[string]int, 5)
+	map4["four"] = 4
+	map4["five"] = 5
+	map4["six"] = 6
+	fmt.Println("Map is created using make function with specific size", map4)
 
-	fmt.Println("The maps declared using make function with specific size", m4)
-
-	// Using struct as a map values
-	type Students struct {
+	// Using Contruct as Map values
+	type Student struct {
 		Name string
 		Age  int
 	}
-	m5 := make(map[string]Students)
-	m5["biraj"] = Students{
-		Name: "Biraj",
+	map5 := make(map[string]Student)
+	map5["student1"] = Student{
+		Name: "Biraj Pudasaini",
 		Age:  20,
 	}
-	fmt.Println(m5)
+	map5["student2"] = Student{
+		Name: "Shyam Pudasaini",
+		Age:  21,
+	}
 
-	// Using nested maps
-	m6 := make(map[string]map[int]string)
-	m6["biraj"] = map[int]string{1: "Biraj", 2: "Ram", 3: "Shyam"}
-	fmt.Println(m6)
+	fmt.Println("Map is created using Construct as Map values", map5)
 
+	// Declarations using Nested Map
+	map6 := make(map[string]map[string]int)
+	map6["fruit"] = map[string]int{
+		"apple":  10,
+		"banana": 20,
+	}
+	map6["vegetable"] = map[string]int{
+		"carrot": 5,
+		"potato": 7,
+	}
+
+	fmt.Println("Map is declared using Nested Map", map6)
 }
