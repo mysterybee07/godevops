@@ -57,3 +57,8 @@ Different Ways to Declare Maps in Go
 
 5. Deleting Elements
    delete(mapVariable, key)
+
+6. Iterating Over Maps
+   for key, value := range mapVariable{
+      <!-- Code -->
+   }
