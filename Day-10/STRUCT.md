@@ -60,3 +60,38 @@ A struct in Go is a composite data type that groups together variables under a s
     Age int
     Contact //Embedded field
    }
+
+# Common Operations in Go structure
+1. Creating an Instance of a Struct
+   type Person struct{
+    Name string
+    Age int
+   }
+   person1:= Person{
+    Name: "Biraj",
+    Age: 23,
+   }
+
+2. Accessing and Modifying fields
+   fmt.Println(person1.Name) //access
+   p.Age= 24 //modify
+
+3. Pointers to Structs
+   p:= &Person{
+    Name:"Biraj",
+    Age: 25,
+   }
+
+4. Methods on Structs
+   func(p Person) Greet()string{
+    return "Hello," + p.Name
+   }
+   We can define methods on structs. Methods have a receiver argument
+   that represents teh instance of the struct.
+
+5. Tagging Struct Fields
+   type Person struct{
+    Name string `json: "name"`
+    Age int `json:"age"`
+   }
+   We can tag struct fields with additional metadata, often used with encoding/decoding libraries.
