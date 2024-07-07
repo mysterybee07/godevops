@@ -50,4 +50,14 @@ A Pointer is a variable that stores the memory address of another variable.
    p3:=&a
    fmt.Println(p1==p2)
    fmt.Println(p1==p3)
-4. 
+   We can compare two pointers using the == and != operators to check if they point to the same address
+
+4. Passing pointers to functions
+   func increment(x *int){
+    *x++
+   }
+
+   var value int =5
+   increment(&value)
+   fmt.Println(value)
+   We can pass pointers to function. This is often done to modify the value if the argument or to pass large structs without copying them.
