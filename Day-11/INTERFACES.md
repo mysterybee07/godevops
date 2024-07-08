@@ -51,3 +51,46 @@ An interface is defined as a set of method signatures. A method's signature incl
     
    }
    With the introduction of generices in Go, interfaces can be used as a type constraints in generic functions or types.
+
+# Common Operations in Interfaces
+1. Normal
+   type Shape interface{
+    Area() float64
+    Perimeter() float64
+   }
+
+2. Implementing an Interface
+   type Rectangle struct{
+    width, height float64
+   }
+   func(r Rectangle) Area() float64{
+    return r.width*r.height
+   }
+   func (r Rectangle) Perimeter() float64{
+    return 2*(r.width+r.height)
+   }
+   A type implements an interface by implementing all the methods declared in the interface.
+
+3. Type Assertions
+    var s Shape = Rectangle{
+        Width:5,
+        Height:3
+    }
+    r, ok := s.(Rectangle)
+    if ok{
+        fmt.Println("Rectangle width", r.width)
+    }
+    Type assertions are used to retrieve the dynamic value of an interface. This is useful when you need to access the specific type and its methods or properties.
+
+4. Interface with Type Switches
+   func do(i interface{}){
+    switch v:= i.(type){
+        case int:
+        fmt.Println("interger",v)
+        case string:
+        fmt.Println("string",v)
+        default:
+        fmt.Println("Unknown type")
+    }
+   }
+   Type switches are a way to handle different types storage
